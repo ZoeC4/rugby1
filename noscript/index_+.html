@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr" manifest="site.manifest">
+    <head>
+        <meta charset="utf-8">
+        <title>Page d'acceuil du projet</title>
+        <link rel="stylesheet" type="text/css" href="css/style_+.css">
+        <script src="js/script.js"> </script>
+    </head>
+    <body>
+        <div id="visually-hidden">
+            <a href="#titre" tabIndex="0">Passer &agrave; l'ent&ecirc;te</a>
+            <a href="#nav" tabIndex="0">Passer &agrave; la navigation</a>
+            <a href="#section" tabIndex="0">Passer au contenu</a>
+            <a href="#aside" tabIndex="0">Passer au plan de la page</a>
+            <a href="#footer" tabIndex="0">Passer au pied de page</a>
+        </div>
+        <p id="visually-hidden">
+            <a href="#nav" tabIndex="0">Sauter à la navigation</a>
+        </p>
+        <header id="titre">
+            <img src="img/logo_t9.png" alt="logo du site, rugby fauteuil" tabIndex="1">
+            <hr class="spacer">
+            <h1 class="h1" tabIndex="1">Le rugby fauteuil et ses aides techniques</h1>
+        </header>
+        <p id="visually-hidden">
+            <a href="#section" tabIndex="0">Sauter au contenu</a>
+        </p>
+        <nav accesskey="N" id="nav">
+            <ul>
+                <li><a href="histoire.html" tabIndex="1">L'histoire du rugby fauteuil</a></li>
+                <li><a href="regles.html" tabIndex="1">Les r&egrave;gles du rugby fauteuil</a></li>
+                <li><a href="aides_techniques.html" tabIndex="1">Les aides techniques du rugby fauteuil</a></li>
+                <li><a href="informations.html" tabIndex="1">Pour plus d'informations</a></li>
+                <li><a href="reference.html" tabIndex="1">Ensemble de r&eacute;f&eacute;rences</a></li>
+            </ul>
+            <!-- y mettre le fil d'ariane pour les autres pages-->
+        </nav>
+        <p id="visually-hidden">
+            <a href="#aside" tabIndex="0">Sauter au plan de la page</a>
+        </p>
+        <div class="flex_container1">
+            <section id="section" accesskey="S">
+                <h2 class="h2" tabIndex="1">Pr&eacute;sentation de la page</h2>
+                <p tabIndex="1">
+                    Bienvenue sur le site « Le rugby fauteuil et ses aides techniques » ! <br>
+                    Sur ce site, vous allez d&eacute;couvrir ou red&eacute;couvrir le rugby fauteuil.<br>
+                    Vous pourrez trouver des informations diverses sur ce sport :
+                    l’histoire du sport, les r&egrave;gles du jeu, les sp&eacute;cificit&eacute;s des joueurs, ainsi que des informations sur les aides techniques utilis&eacute;es…<br>
+                    Vous trouverez &eacute;galement les principaux liens vers les sites officiels, les &eacute;v&eacute;nements et les f&eacute;d&eacute;rations de ce sport.
+
+                </p>
+                <h2 class="h2" tabIndex="1">Qui suis-je ?</h2>
+                <p tabIndex="1">Je m’appelle Zo&eacute; Charvy, je suis en Master 1 Miashs parcours « handicap et technologies ».<br>
+                    En r&eacute;sum&eacute;, j’&eacute;tudie l’informatique pour l’accessibilit&eacute;.<br>
+                    Ce site est cr&eacute;&eacute; dans le cadre d’un projet p&eacute;dagogique.</p>
+                <h2 class="h2" tabIndex="1">Voici quelqu'un des articles pr&eacute;sents sur ce site</h2>
+                <div class="flex_container2" accesskey="B">
+                    <article id="article1">
+                        <h3 class="h3" tabIndex=1" accesskey="H">L'histoire du rugby fauteuil</h3>
+                        <p tabIndex="1">
+                            Ce sport a &eacute;t&eacute; invent&eacute; en 1976 par des athl&egrave;tes t&eacute;trapl&eacute;giques canadiens.<br>
+                            Il a &eacute;t&eacute; inspir&eacute; par le basket-ball en fauteuil roulant.<br>
+                            <a href="#" class="custom-link" tabIndex="1">Suite de l'article</a>
+                        </p>
+                    </article>
+                    <article id="article2">
+                        <h3 class="h3" tabIndex="1" accesskey="R">Les r&egrave;gles du rugby fauteuil</h3>
+                        <p tabIndex="1">
+                            Ce sport oppose deux &eacute;quipes.<br>
+                            Chaque &eacute;quipe est compos&eacute;e de 4 joueurs.<br>
+                            L’objectif de chaque&eacute;quipe est de porter un ballon dans la ligne de but de l’adversaire.<br>
+                            <a href="#" class="custom-link" tabIndex="7">Suite de l'article</a>
+                        </p>
+                    </article>
+                    <article id="article3">
+                        <h3 class="h3" tabIndex="1" accesskey="T">Les aides techniques du rugby fauteuil</h3>
+                        <p tabIndex="1">
+                            Les &eacute;quipements des joueurs sont les suivants.<br>
+                            On peut y trouver des protections pour les mains.<br>
+                            Il y a une seule contrainte sur ces gants.<br>
+                            <a href="#" class="custom-link" tabIndex="1">Suite de l'article</a>
+                        </p>
+                    </article>
+                </div>
+                <a href="#titre" tabIndex="0">Retour en haut de la page</a>
+            </section>
+            <hr class="spacer">
+            <p id="visually-hidden">
+                <a href="#footer" tabIndex="0">Sauter au pied de page</a>
+            </p>
+            <aside id="aside">
+                <ul>
+                    <li>Page d'index</li>
+                        <ul>
+                            <li><a href="#article1" class="custom-link" tabIndex="1">L'histoire du rugby fauteuil</a></li>
+                            <li><a href="#article2" class="custom-link" tabIndex="1">Les r&egrave;gles du rugby fauteuil</a></li>
+                            <li><a href="#article3" class="custom-link" tabIndex="1">Les aides techniques du rugby fauteuil</a></li>
+                        </ul>
+                </ul>
+            </aside>
+        </div>
+        <hr class="spacer">
+        <footer id="footer">
+            <div class="class_flexbox">
+                <div class="footer_accessibilite" accesskey="A">
+                    <h2 class="h2">Accessibilit&eacute;</h2>
+                    <ul>
+                        <li><a href="noscript/index_Dys.html" tabIndex="1">Page avec la police d'&eacute;criture OpenDyslexie</a></li>
+                        <li><a href="noscript/index_C.html" tabIndex="1">Page avec le maximum de contraste</a></li>
+                        <li><a href="noscript/index_+_C.html" tabIndex="1">Page avec une grande police d'&eacute;criture et et le maximum de contraste</a></li>
+                    </ul>
+                </div>
+                <div class="footer_liens">
+                    <h2 class="h2">Liens utiles</h2>
+                    <ul>
+                        <li><a href="histoire.html" tabIndex="1">L'histoire du rugby fauteuil</a></li>
+                        <li><a href="regles.html" tabIndex="1">Les r&egrave;gles du rugby fauteuil</a></li>
+                        <li><a href="aides_techniques.html" tabIndex="1">Les aides techniques du rugby fauteuil</a></li>
+                        <li><a href="informations.html" tabIndex="1">Pour plus d'informations</a></li>
+                        <li><a href="reference.html" tabIndex="1">Ensemble de r&eacute;f&eacute;rences</a></li>
+                    </ul>
+                </div>
+                <div class="footer_presentations">
+                    <img src="img/logo_t9.png" alt="logo du site, rugby fauteuil" class="img_footer2">
+                    <p> <span class="important" id="imp">Master Handi</span> <br> l'informatique au service du handicap</p>
+                </div>
+                <div class="footer_suivre" accesskey="C">
+                    <h2 class="h2">Suivez-nous</h2>
+                        <ul>
+                            <li><a href="https://www.univ-paris8.fr/-Master-Technologie-et-Handicap-676-" tabIndex="1"><img src="img/logo_paris8.png" alt="logo universit&eacute; Paris 8" class="img_footer2"></a></li>
+                            <li><a href="https://master-handi.univ-paris8.fr/" tabIndex="1"><img src="img/logo_handiman.png" alt="logo master MIASHS handi" class="img_footer2"></a></li>
+                            <li><a href="mailto:zoe.charvy@laposte.net?subject=informations" tabIndex="1"><img src="img/mail.png" alt="logo de mail" class="img_footer2"></a></li>
+                        </ul>
+                </div>
+            </div>
+            <p class="copyright">Copyright 2023 - Charvy</p>
+        </footer>
+    </body>
+</html>
+<!-- entêtes, centrer le titre-->
+<!-- js : custom-link ne fonctionne que pour le premier-->
+<!-- tester les raccourcis clavier -->
+<!-- tester les accessKey-->
+<!-- vérifier la couleur d'affichage des liens-->
+
+<!-- comprendre la loupe-->
+<!-- défilement: tabIndex et le css-->
+<!-- lien noScript-->
+
+<!-- tester les codes-->
+<!-- vérifier l'accessibilité-->

@@ -1,0 +1,254 @@
+        /* fonction d'accessibilité */
+    /* fonction contraste */
+function contrasteR() {
+    // Obtenir les éléments
+    var sectionElement = document.getElementById("section");
+    var asideElement = document.getElementById("aside");
+    var titreElement = document.getElementById("titre");
+    var imageElement = document.querySelectorAll(".iconesC");
+    var article1Element = document.getElementById("article1");
+    var article2Element = document.getElementById("article2");
+    var article3Element = document.getElementById("article3");
+    // changer la couleur de fond et de police
+    sectionElement.style.backgroundColor = '#000000';
+    sectionElement.style.color = '#ffffff';
+    asideElement.style.backgroundColor = '#000000';
+    asideElement.style.color = '#ffffff';
+    titreElement.style.backgroundColor = '#000000';
+    titreElement.style.color = '#ffffff';
+    imageElement.forEach(function(element) {
+        element.style.filter = "invert(100%) brightness(90%)";
+        element.style.border = "1px solid #ffffff";
+    });
+
+        // à refaire
+    var lienElement = document.querySelectorAll(".custom-link");
+
+    lienElement.forEach(function(element){
+        element.style.color = '#86ABE3';
+        element.addEventListener('mouseover', function() {
+            element.style.color = '#EEA826';
+        });
+        element.addEventListener('click', function() {
+            element.style.color = '#E48A86';
+        });
+    });
+    article1Element.style.border="1px solid #808080";
+    article2Element.style.border="1px solid #808080";
+    article3Element.style.border="1px solid #808080";
+
+
+}
+function contraste() {
+    // Obtenir les éléments
+    var sectionElement = document.getElementById("section");
+    var asideElement = document.getElementById("aside");
+    var titreElement = document.getElementById("titre");
+    var imageElement = document.querySelectorAll(".iconesC");
+    var article1Element = document.getElementById("article1");
+    var article2Element = document.getElementById("article2");
+    var article3Element = document.getElementById("article3");
+    // changer la couleur de fond et de police
+    sectionElement.style.backgroundColor = '#D77FE4';
+    sectionElement.style.color = '#000000';
+    asideElement.style.backgroundColor = '#B9BA58';
+    asideElement.style.color = '#000000';
+    titreElement.style.backgroundColor = '#77BBC2';
+    titreElement.style.color = '#000000';
+    imageElement.forEach(function(element) {
+        element.style.filter="none";
+        element.style.border="none";
+    });
+
+        // les liens plus particuliers
+    var lienElement = document.querySelectorAll(".custom-link");
+
+    lienElement.forEach(function(element){
+        element.style.color = '#000000';
+        element.addEventListener('mouseover', function() {
+            element.style.color = '#000000';
+        });
+        element.addEventListener('click', function() {
+            element.style.color = '#000000';
+        });
+    });
+    article1Element.style.border="1px solid #000000";
+    article2Element.style.border="1px solid #000000";
+    article3Element.style.border="1px solid #000000";
+}
+    /* fonction police */
+function policeDys() {
+        // Obtenir les éléments
+    var h1Element = document.querySelector('h1');
+    var h2Element = document.querySelectorAll('h2');
+    var h3Element = document.querySelectorAll('h3');
+    var impElement = document.getElementById("imp");
+    var bodyElement = document.body;
+
+    var openDyslexicRegularFont = new FontFace('OpenDyslexic_regular', 'url(open_dyslexic/OpenDyslexic-Regular.otf)');
+        openDyslexicRegularFont.load().then(function(loadedFont) {
+        document.fonts.add(loadedFont);
+        bodyElement.style.fontFamily = "OpenDyslexic_regular, arial";
+    }).catch(function(error) {
+        console.error('Erreur de chargement de la police OpenDyslexic:', error);
+        // mettre un code erreur plus clair pour l'user
+        alert('police non utilisable');
+    })
+    var openDyslexicBoldFont = new FontFace('OpenDyslexic_bold', 'url(open_dyslexic/OpenDyslexic-Bold.otf)');
+        openDyslexicBoldFont.load().then(function(loadedFont) {
+        document.fonts.add(loadedFont);
+        h1Element.style.fontFamily = "OpenDyslexic_bold, arial";
+        h2Element.forEach(function(element){
+            element.style.fontFamily = "OpenDyslexic_bold, arial";
+        });
+        h3Element.forEach(function(element){
+            element.style.fontFamily = "OpenDyslexic_bold, arial";
+        });
+        impElement.style.fontFamily = "OpenDyslexic_bold, arial";
+    }).catch(function(error) {
+        console.error('Erreur de chargement de la police OpenDyslexic:', error);
+        // mettre un code erreur plus clair pour l'user
+        alert('police non utilisable');
+    })
+}
+function policeLuciole() {
+    // Obtenir les éléments
+var h1Element = document.querySelector('h1');
+var h2Element = document.querySelectorAll('h2');
+var h3Element = document.querySelectorAll('h3');
+var impElement = document.getElementById("imp");
+var bodyElement = document.body;
+
+var lucioleRegularFont = new FontFace('Luciole_regular', 'url(luciole/Luciole-Regular.ttf)');
+    lucioleRegularFont.load().then(function(loadedFont) {
+    document.fonts.add(loadedFont);
+    bodyElement.style.fontFamily = "Luciole_regular, arial";
+}).catch(function(error) {
+    console.error('Erreur de chargement de la police Luciole:', error);
+    // mettre un code erreur plus clair pour l'user
+    alert('police non utilisable');
+})
+var lucioleBoldFont = new FontFace('Luciole_bold', 'url(luciole/Luciole-Bold.ttf)');
+    lucioleBoldFont.load().then(function(loadedFont) {
+    document.fonts.add(loadedFont);
+    h1Element.style.fontFamily = "Luciole_bold, arial";
+    h2Element.forEach(function(element){
+        element.style.fontFamily = "Luciole_bold, arial";
+    });
+    h3Element.forEach(function(element){
+        element.style.fontFamily = "Luciole_bold, arial";
+    });
+    impElement.style.fontFamily = "Luciole_bold, arial";
+}).catch(function(error) {
+    console.error('Erreur de chargement de la police Luciole:', error);
+    // mettre un code erreur plus clair pour l'user
+    alert('police non utilisable');
+})
+}
+function policeArial() {
+        // Obtenir les éléments
+    var h1Element = document.querySelector('h1');
+    var h2Element = document.querySelectorAll('h2');
+    var h3Element = document.querySelectorAll('h3');
+    var impElement = document.getElementById("imp");
+    var bodyElement = document.body;
+    h1Element.style.fontFamily = "Arial, sans-serif";
+    h2Element.forEach(function(element){
+        element.style.fontFamily = "Arial, sans-serif";;
+    });
+    h3Element.forEach(function(element){
+        element.style.fontFamily = "Arial, sans-serif";;
+    });
+    impElement.style.fontFamily = "Arial, sans-serif";;
+    bodyElement.style.fontFamily = "Arial, sans-serif";;
+}
+    /* taille de la police */
+function policePlus(){
+    var bodyElement = document.body;
+    bodyElement.style.fontSize = "25px";
+}
+function policeMoins(){
+    var bodyElement = document.body;
+    bodyElement.style.fontSize = "20px";
+}
+
+        /* raccourci clavier */
+
+    /* ouvrir un lien, avec ou sans nouvelle page*/
+function simulerClic(element) {
+    element.click();
+    }
+function ouvrirNouvellePage(element) {
+    window.open(element.href, '_blank'); /* selon le navigateur */
+}
+
+document.addEventListener('keydown', function (event) {
+    if (event.ctrlKey && event.altKey &&(event.key === 'N' || event.key === 'n')) {
+        var elementWithFocus = document.activeElement;
+        windows.alert(elementWithFocus.tagName);
+
+        if ((elementWithFocus.tagName === 'a' || elementWithFocus.tagName === 'A')&& elementWithFocus.hasAttribute('href')) {
+            ouvrirNouvellePage(elementWithFocus);
+        }
+    }
+});
+document.addEventListener('keydown', function (event) {
+    if (event.ctrlKey && event.altKey &&(event.key === 'O' || event.key === 'o')) {
+        var elementWithFocus = document.activeElement;
+
+    if ((elementWithFocus.tagName === 'a' || elementWithFocus.tagName === 'A')&& elementWithFocus.hasAttribute('href')) {
+        simulerClic(elementWithFocus);
+    }
+    }
+});
+
+        /* service worker */
+const cacheName = 'votre-application-cache-v1';
+const filesToCache = [
+    '/',
+    '/css/style.css',
+    '/js/script.js',
+    '/index.html',
+    '/reference.html',
+    '/informations.html',
+    '/histoire.html',
+    '/regles.html',
+    '/aides_techniques.html',
+    '/img/diagramA.png',
+    '/img/diagramB.png',
+    '/img/diagramC.png',
+    '/img/diagramD.png',
+    '/img/fauteuils-offensif-defensif.png',
+    '/img/logo_handiman.png',
+    '/img/logo_paris8.png',
+    '/img/logo_t8.png',
+    '/img/mail.png',
+    '/img/header.svg',
+    '/img/nav.svg',
+    '/img/section.svg',
+    '/img/aside.svg',
+    '/img/footer.svg',
+    '/open_dyslexic/OpenDyslexic-Regular.otf',
+    '/open_dyslexic/OpenDyslexic-Bold.otf',
+    '/luciole/Luciole-Bold.ttf',
+    '/luciole/Luciole-Regular.ttf',
+    '/noscript/aides_techniques_+.html',
+    '/noscript/aides_techniques_Dys.html',
+    // Ajoutez toutes les autres ressources ici
+];
+
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(cacheName).then((cache) => {
+            return cache.addAll(filesToCache);
+        })
+    );
+});
+
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request).then((response) => {
+            return response || fetch(event.request);
+        })
+    );
+});
