@@ -79,9 +79,6 @@ aside {
     box-shadow: 10px 10px 10px #5F6A6A;
     padding: 0.5em;
 }
-.img_aside{
-    width: 15%;
-}
 
     /* footer */
 footer {
@@ -136,12 +133,14 @@ a:visited {
 a:link {
     color: #86ABE3;
 }
-aside a:link, aside a:hover, aside a:visited, article a:link, article a:hover, article a:visited, section a:hover, section a:visited, section a:link{
+aside a:link, aside a:hover, aside a:visited, article a:link, article a:hover, article a:visited,
+section a:hover, section a:visited, section a:link, #liens_rapides a:link, #liens_rapides a:hover, #liens_rapides a:visited,
+#icone_nav a:link, #icone_nav a:hover, #icone_nav{
     color: #000000;
 }
 
     /* liens d'évitements */
-.hidden {
+.hidden, #liens_rapides, #icone_nav {
     position:absolute;
     left:0;
     margin-top:-1000px;
@@ -149,7 +148,7 @@ aside a:link, aside a:hover, aside a:visited, article a:link, article a:hover, a
     height:1px;
     overflow:hidden;
 }
-a:focus span.hidden {
+a:focus span.hidden, #liens_rapides a:focus, #icones_nav a:focus{
     display:block;
     font-size:0.9em;
     width:12em;
@@ -162,7 +161,7 @@ a:focus span.hidden {
     border:1px solid #cacaca;
     text-decoration:none;
 }
-a:active span.hidden {
+a:active span.hidden, #liens_rapides a:active, #icones_nav a:active {
     display:block;
     font-size:0.9em;
     width:12em;
