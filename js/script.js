@@ -82,6 +82,7 @@ function policeDys() {
     var h1Element = document.querySelector('h1');
     var h2Element = document.querySelectorAll('h2');
     var h3Element = document.querySelectorAll('h3');
+    var h4Element = document.querySelectorAll('h4');
     var impElement = document.getElementById("imp");
     var bodyElement = document.body;
 
@@ -104,6 +105,9 @@ function policeDys() {
         h3Element.forEach(function(element){
             element.style.fontFamily = "OpenDyslexic_bold, arial";
         });
+        h4Element.forEach(function(element){
+            element.style.fontFamily = "OpenDyslexic_bold, arial";
+        });
         impElement.style.fontFamily = "OpenDyslexic_bold, arial";
     }).catch(function(error) {
         console.error('Erreur de chargement de la police OpenDyslexic:', error);
@@ -116,6 +120,7 @@ function policeLuciole() {
 var h1Element = document.querySelector('h1');
 var h2Element = document.querySelectorAll('h2');
 var h3Element = document.querySelectorAll('h3');
+var h4Element = document.querySelectorAll('h4');
 var impElement = document.getElementById("imp");
 var bodyElement = document.body;
 
@@ -138,6 +143,9 @@ var lucioleBoldFont = new FontFace('Luciole_bold', 'url(luciole/Luciole-Bold.ttf
     h3Element.forEach(function(element){
         element.style.fontFamily = "Luciole_bold, arial";
     });
+    h4Element.forEach(function(element){
+        element.style.fontFamily = "Luciole_bold, arial";
+    });
     impElement.style.fontFamily = "Luciole_bold, arial";
 }).catch(function(error) {
     console.error('Erreur de chargement de la police Luciole:', error);
@@ -150,26 +158,90 @@ function policeArial() {
     var h1Element = document.querySelector('h1');
     var h2Element = document.querySelectorAll('h2');
     var h3Element = document.querySelectorAll('h3');
+    var h4Element = document.querySelectorAll('h4');
     var impElement = document.getElementById("imp");
     var bodyElement = document.body;
     h1Element.style.fontFamily = "Arial, sans-serif";
     h2Element.forEach(function(element){
-        element.style.fontFamily = "Arial, sans-serif";;
+        element.style.fontFamily = "Arial, sans-serif";
     });
     h3Element.forEach(function(element){
-        element.style.fontFamily = "Arial, sans-serif";;
+        element.style.fontFamily = "Arial, sans-serif";
     });
-    impElement.style.fontFamily = "Arial, sans-serif";;
-    bodyElement.style.fontFamily = "Arial, sans-serif";;
+    h4Element.forEach(function(element){
+        element.style.fontFamily = "Arial, sans-serif";
+    });
+    impElement.style.fontFamily = "Arial, sans-serif";
+    bodyElement.style.fontFamily = "Arial, sans-serif";
 }
     /* taille de la police */
 function policePlus(){
     var bodyElement = document.body;
-    bodyElement.style.fontSize = "25px";
+    bodyElement.style.fontSize = "30px";
+    var imgsElement = document.querySelectorAll('.img_section');
+    var imgfElement = document.querySelectorAll('.img_footer2');
+    var icones1Element = document.querySelectorAll('.icones');
+    var icones2Element = document.querySelectorAll('.iconesN');
+    var icones3Element = document.querySelectorAll('.iconesC');
+    var largeurEcran = window.innerWidth;
+    imgsElement.forEach(function(element){
+        element.style.width = "85%";
+    });
+    imgfElement.forEach(function(element){
+        if (largeurEcran > 920) {
+            element.style.width = "40%";
+        } else if (largeurEcran > 720) {
+            element.style.width = "20%";
+        } else {
+            element.style.width = "20%";
+        }
+    });
+    icones1Element.forEach(function(element){
+        element.style.width = "45px";
+        element.style.height = "45px";
+    });
+    icones2Element.forEach(function(element){
+        element.style.width = "45px";
+        element.style.height = "45px";
+    });
+    icones3Element.forEach(function(element){
+        element.style.width = "45px";
+        element.style.height = "45px";
+    });
 }
 function policeMoins(){
     var bodyElement = document.body;
     bodyElement.style.fontSize = "20px";
+    var imgsElement = document.querySelectorAll('.img_section');
+    var imgfElement = document.querySelectorAll('.img_footer2');
+    var icones1Element = document.querySelectorAll('.icones');
+    var icones2Element = document.querySelectorAll('.iconesN');
+    var icones3Element = document.querySelectorAll('.iconesC');
+    var largeurEcran = window.innerWidth;
+    imgsElement.forEach(function(element){
+        element.style.width = "70%";
+    });
+    imgfElement.forEach(function(element){
+        if (largeurEcran > 920) {
+            element.style.width = "30%";
+        } else if (largeurEcran > 720) {
+            element.style.width = "10%";
+        } else {
+            element.style.width = "10%";
+        }
+    });
+    icones1Element.forEach(function(element){
+        element.style.width = "32px";
+        element.style.height = "32px";
+    });
+    icones2Element.forEach(function(element){
+        element.style.width = "32px";
+        element.style.height = "32px";
+    });
+    icones3Element.forEach(function(element){
+        element.style.width = "32px";
+        element.style.height = "32px";
+    });
 }
 
         /* raccourci clavier */
