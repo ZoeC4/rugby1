@@ -6,16 +6,16 @@ window.addEventListener('load', function() {
     var aP = localStorage.getItem('aP');
     var pL = localStorage.getItem('pL');
     var pO = localStorage.getItem('pO');
-    if (cR){
+    if (cR=='true'){
         contrasteR();
     }
-    if (aP){
+    if (aP=='true'){
         policePlus();
     }
-    if (pL){
+    if (pL=='true'){
         policeDys();
     }
-    if (pO){
+    if (pO=='true'){
         policeLuciole();
     }
 });
