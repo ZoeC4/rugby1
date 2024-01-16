@@ -6,6 +6,10 @@ window.addEventListener('load', function() {
     var aP = localStorage.getItem('aP');
     var pL = localStorage.getItem('pL');
     var pO = localStorage.getItem('pO');
+    alert(cR);
+    alert(aP);
+    alert(pL);
+    alert(pO);
     if (cR){
         contrasteR();
     }
