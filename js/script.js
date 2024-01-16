@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
     alert(aP);
     alert(pL);
     alert(pO);
-    if (cR){
+    if (cR=='true'){
         contrasteR();
     }
     if (aP){
