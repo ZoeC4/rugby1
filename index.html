@@ -66,11 +66,11 @@
         </nav>
         <div class="flex_container1">
             <section id="section" accesskey="s" aria-label="Contenu principal de la page">
-                <a href="#aside" tabIndex="-1"  title="Passer au plan de la page">
+                <a href="#aside" tabIndex="-1" title="Passer au plan de la page">
                     <img src="img/aside.svg" alt="dessin d'un panneau indiquant la direction" class="iconesC" title="Passer au plan de la page">
                     <span class="hidden">Passer au plan de la page</span></a>
                 <h2 tabIndex="0">Bienvenue sur cette page</h2>
-                <h3 tabIndex="0">Pr&eacute;sentation de la page</h3>
+                <h3 tabIndex="0" id="titre1">Pr&eacute;sentation de la page</h3>
                 <p tabIndex="0">
                     Bienvenue sur le site « Le rugby fauteuil et ses aides techniques » ! <br>
                     Sur ce site, vous allez d&eacute;couvrir ou red&eacute;couvrir le rugby fauteuil.<br>
@@ -79,13 +79,13 @@
                     Vous trouverez &eacute;galement les principaux liens vers les sites officiels, les &eacute;v&eacute;nements et les f&eacute;d&eacute;rations de ce sport.
 
                 </p>
-                <h3 tabIndex="0">Qui suis-je ?</h3>
+                <h3 tabIndex="0" id="titre2">Qui suis-je ?</h3>
                 <p tabIndex="0">Je m’appelle Zo&eacute; Charvy, je suis en Master 1 Miashs parcours « handicap et technologies ».<br>
                     En r&eacute;sum&eacute;, j’&eacute;tudie l’informatique pour l’accessibilit&eacute;.<br>
                     Ce site est cr&eacute;&eacute; dans le cadre d’un projet p&eacute;dagogique.</p>
-                <h3 tabIndex="0">Voici quelqu'un des articles pr&eacute;sents sur ce site</h3>
+                <h3 tabIndex="0" id="titre3">Voici quelqu'un des articles pr&eacute;sents sur ce site</h3>
                 <div class="flex_container2">
-                    <article id="article1" accesskey="i">
+                    <article accesskey="i" id="article1">
                         <h4 tabIndex="0">L'histoire du rugby fauteuil</h4>
                         <p tabIndex="0">
                             Ce sport a &eacute;t&eacute; invent&eacute; en 1976 par des athl&egrave;tes t&eacute;trapl&eacute;giques canadiens.<br>
@@ -93,7 +93,7 @@
                             <a href="histoire.html" class="custom-link" tabIndex="0">Suite de l'article</a>
                         </p>
                     </article>
-                    <article id="article2" accesskey="r">
+                    <article accesskey="r" id="article2">
                         <h4 tabIndex="0">Les r&egrave;gles du rugby fauteuil</h4>
                         <p tabIndex="0">
                             Ce sport oppose deux &eacute;quipes.<br>
@@ -102,7 +102,7 @@
                             <a href="regles.html" class="custom-link" tabIndex="0">Suite de l'article</a>
                         </p>
                     </article>
-                    <article id="article3" accesskey="t">
+                    <article accesskey="t" id="article3">
                         <h4 tabIndex="0">Les aides techniques du rugby fauteuil</h4>
                         <p tabIndex="0">
                             Les &eacute;quipements des joueurs sont les suivants.<br>
@@ -125,9 +125,9 @@
                     <li tabIndex="0">
                         Page d'index
                         <ul>
-                            <li><a href="#article1" class="custom-link" tabIndex="0">L'histoire du rugby fauteuil</a></li>
-                            <li><a href="#article2" class="custom-link" tabIndex="0">Les r&egrave;gles du rugby fauteuil</a></li>
-                            <li><a href="#article3" class="custom-link" tabIndex="0">Les aides techniques du rugby fauteuil</a></li>
+                            <li><a href="#titre1" class="custom-link" tabIndex="0">Pr&eacute;sentation de la page</a></li>
+                            <li><a href="#titre2" class="custom-link" tabIndex="0">Qui suis-je ?</a></li>
+                            <li><a href="#titre3" class="custom-link" tabIndex="0">Voici quelqu'un des articles pr&eacute;sents sur ce site</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -212,14 +212,17 @@
     </body>
 </html>
 <!-- voir enlever les accesskey, si coh&eacute;rent-->
-<!-- js: raccourci clavier 'n', quand changement de page-->
+<!-- js: raccourci clavier 'n', changement de page si changement user-->
 <!-- noscript2 : le garder-->
 <!-- droits des images, demander master et Paris 8 -->
 
 <!--pb, changement de taille img_footer2-->
+<!-- lien hover et active, css et js-->
 
 
 <!-- lien noScript: luciole, ..., css ave c bordure article 808080, taille image et police grand caract&egrave;re (85, 40, 20, 45px, 30px)-->
 
 
 <!-- v&eacute;rifier l'accessibilit&eacute;--> <!-- test manuel fait, sauf links--><!-- code AAA à trouver -->
+
+<!-- retour : menu aside qui se déplace/ mise à jour dans le logo/ couleur des liens à respecter-->
