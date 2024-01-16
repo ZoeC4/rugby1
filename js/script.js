@@ -1,6 +1,28 @@
         /* fonction d'accessibilité */
+    /* les variables */
+    /* ouverture d'une page */
+window.addEventListener('load', function() {
+    var cR = localStorage.getItem('cR');
+    var aP = localStorage.getItem('aP');
+    var pL = localStorage.getItem('pL');
+    var pO = localStorage.getItem('pO');
+    if (cR){
+        contrasteR();
+    }
+    if (aP){
+        policePlus();
+    }
+    if (pL){
+        policeDys();
+    }
+    if (pO){
+        policeLuciole();
+    }
+});
+
     /* fonction contraste */
 function contrasteR() {
+    localStorage.setItem('cR', 'true');
     // Obtenir les éléments
     var sectionElement = document.getElementById("section");
     var asideElement = document.getElementById("aside");
@@ -36,10 +58,10 @@ function contrasteR() {
     article1Element.style.border="1px solid #808080";
     article2Element.style.border="1px solid #808080";
     article3Element.style.border="1px solid #808080";
-
-
 }
+
 function contraste() {
+    localStorage.setItem('cR', 'false');
     // Obtenir les éléments
     var sectionElement = document.getElementById("section");
     var asideElement = document.getElementById("aside");
@@ -78,6 +100,8 @@ function contraste() {
 }
     /* fonction police */
 function policeDys() {
+    localStorage.setItem('pO', 'true');
+    localStorage.setItem('pL', 'false');
         // Obtenir les éléments
     var h1Element = document.querySelector('h1');
     var h2Element = document.querySelectorAll('h2');
@@ -116,44 +140,48 @@ function policeDys() {
     })
 }
 function policeLuciole() {
+    localStorage.setItem('pO', 'false');
+    localStorage.setItem('pL', 'true');
     // Obtenir les éléments
-var h1Element = document.querySelector('h1');
-var h2Element = document.querySelectorAll('h2');
-var h3Element = document.querySelectorAll('h3');
-var h4Element = document.querySelectorAll('h4');
-var impElement = document.getElementById("imp");
-var bodyElement = document.body;
+    var h1Element = document.querySelector('h1');
+    var h2Element = document.querySelectorAll('h2');
+    var h3Element = document.querySelectorAll('h3');
+    var h4Element = document.querySelectorAll('h4');
+    var impElement = document.getElementById("imp");
+    var bodyElement = document.body;
 
-var lucioleRegularFont = new FontFace('Luciole_regular', 'url(luciole/Luciole-Regular.ttf)');
-    lucioleRegularFont.load().then(function(loadedFont) {
-    document.fonts.add(loadedFont);
-    bodyElement.style.fontFamily = "Luciole_regular, arial";
-}).catch(function(error) {
-    console.error('Erreur de chargement de la police Luciole:', error);
-    // mettre un code erreur plus clair pour l'user
-    alert('police non utilisable');
-})
-var lucioleBoldFont = new FontFace('Luciole_bold', 'url(luciole/Luciole-Bold.ttf)');
-    lucioleBoldFont.load().then(function(loadedFont) {
-    document.fonts.add(loadedFont);
-    h1Element.style.fontFamily = "Luciole_bold, arial";
-    h2Element.forEach(function(element){
-        element.style.fontFamily = "Luciole_bold, arial";
-    });
-    h3Element.forEach(function(element){
-        element.style.fontFamily = "Luciole_bold, arial";
-    });
-    h4Element.forEach(function(element){
-        element.style.fontFamily = "Luciole_bold, arial";
-    });
-    impElement.style.fontFamily = "Luciole_bold, arial";
-}).catch(function(error) {
-    console.error('Erreur de chargement de la police Luciole:', error);
-    // mettre un code erreur plus clair pour l'user
-    alert('police non utilisable');
-})
+    var lucioleRegularFont = new FontFace('Luciole_regular', 'url(luciole/Luciole-Regular.ttf)');
+        lucioleRegularFont.load().then(function(loadedFont) {
+        document.fonts.add(loadedFont);
+        bodyElement.style.fontFamily = "Luciole_regular, arial";
+    }).catch(function(error) {
+        console.error('Erreur de chargement de la police Luciole:', error);
+        // mettre un code erreur plus clair pour l'user
+        alert('police non utilisable');
+    })
+    var lucioleBoldFont = new FontFace('Luciole_bold', 'url(luciole/Luciole-Bold.ttf)');
+        lucioleBoldFont.load().then(function(loadedFont) {
+        document.fonts.add(loadedFont);
+        h1Element.style.fontFamily = "Luciole_bold, arial";
+        h2Element.forEach(function(element){
+            element.style.fontFamily = "Luciole_bold, arial";
+        });
+        h3Element.forEach(function(element){
+            element.style.fontFamily = "Luciole_bold, arial";
+        });
+        h4Element.forEach(function(element){
+            element.style.fontFamily = "Luciole_bold, arial";
+        });
+        impElement.style.fontFamily = "Luciole_bold, arial";
+    }).catch(function(error) {
+        console.error('Erreur de chargement de la police Luciole:', error);
+        // mettre un code erreur plus clair pour l'user
+        alert('police non utilisable');
+    })
 }
 function policeArial() {
+    localStorage.setItem('pO', 'false');
+    localStorage.setItem('pL', 'false');
         // Obtenir les éléments
     var h1Element = document.querySelector('h1');
     var h2Element = document.querySelectorAll('h2');
@@ -176,6 +204,7 @@ function policeArial() {
 }
     /* taille de la police */
 function policePlus(){
+    localStorage.setItem('aP', 'true');
     var bodyElement = document.body;
     bodyElement.style.fontSize = "30px";
     var imgsElement = document.querySelectorAll('.img_section');
@@ -210,6 +239,7 @@ function policePlus(){
     });
 }
 function policeMoins(){
+    localStorage.setItem('aP', 'false');
     var bodyElement = document.body;
     bodyElement.style.fontSize = "20px";
     var imgsElement = document.querySelectorAll('.img_section');
