@@ -21,10 +21,10 @@
             <section id="section" accesskey="s" aria-label="Contenu principal de la page">
 
             <!-- SiteSearch Google -->
-            <form action="http://https://zoec4.github.io/rugby3/" id="cse-search-box">
+            <form action="http://https://zoec4.github.io/rugby1/" id="cse-search-box">
                 <div> <input type="hidden" name="cx" value="partner-pub-7251150894597704:nz8345-k1u9" />
                     <input type="hidden" name="cof" value="FORID:9" /> <input type="hidden" name="ie" value="ISO-8859-1" />
-                    <input name="sitesearch" value="http://https://zoec4.github.io/rugby3/" type="hidden"> <input type="text" name="q" size="31" />
+                    <input name="sitesearch" value="http://https://zoec4.github.io/rugby1/" type="hidden"> <input type="text" name="q" size="31" />
                     <input type="submit" name="sa" value="Rechercher" />
                 </div>
                 <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr">
