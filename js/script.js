@@ -2,21 +2,44 @@
     /* les variables */
     /* ouverture d'une page */
 window.addEventListener('load', function() {
-    var cR = localStorage.getItem('cR');
-    var aP = localStorage.getItem('aP');
-    var pL = localStorage.getItem('pL');
-    var pO = localStorage.getItem('pO');
-    if (cR=='true'){
+    var cR = JSON.parse(localStorage.getItem('cR')); // transtypage
+    var aP = JSON.parse(localStorage.getItem('aP'));
+    var pL = JSON.parse(localStorage.getItem('pL'));
+    var pO = JSON.parse(localStorage.getItem('pO'));
+    if(cR){
+        alert("boucle contraste R");
         contrasteR();
     }
-    if (aP=='true'){
+    if (aP){
+        alert("boucle police +");
         policePlus();
     }
-    if (pL=='true'){
+    if (pL){
+        alert("boucle police Dys");
         policeDys();
     }
-    if (pO=='true'){
+    if (pO){
+        alert("boucle police Luciole");
         policeLuciole();
+    }
+});
+function logo(){
+    contraste();
+    policeMoins();
+    policeArial();
+}
+    // adapter la couleur de la fleche
+
+document.addEventListener('focusin', function(event) {
+    const targetElement = event.target;
+    const computedStyle = window.getComputedStyle(targetElement);
+    const backgroundColor = computedStyle.backgroundColor;
+    const flecheElement = document.getElementById("img_fleche");
+    if (backgroundColor === "#000000") {
+        flecheElement.styleborder = "1px #ffffff solid";
+        flecheElement.style.backgroundColor="#ffffff";
+    } else {
+      flecheElement.style.filter = "none";
     }
 });
 
@@ -28,9 +51,6 @@ function contrasteR() {
     var asideElement = document.getElementById("aside");
     var titreElement = document.getElementById("titre");
     var imageElement = document.querySelectorAll(".iconesC");
-    var article1Element = document.getElementById("article1");
-    var article2Element = document.getElementById("article2");
-    var article3Element = document.getElementById("article3");
     // changer la couleur de fond et de police
     sectionElement.style.backgroundColor = '#000000';
     sectionElement.style.color = '#ffffff';
@@ -43,21 +63,30 @@ function contrasteR() {
         element.style.border = "1px solid #ffffff";
     });
 
-        // à refaire
+        // liens
     var lienElement = document.querySelectorAll(".custom-link");
 
     lienElement.forEach(function(element){
         element.style.color = '#86ABE3';
-        element.addEventListener('mouseover', function() {
-            element.style.color = '#EEA826';
+        // Au survol
+        element.addEventListener('mouseover', function () {
+            element.style.fontSize = '2em';
+            element.style.color = '#e19d20';
         });
-        element.addEventListener('click', function() {
-            element.style.color = '#E48A86';
+        // quitter le survol
+        element.addEventListener('mouseout', function () {
+            element.style.fontSize = '1em'; // Rétablir la taille de la police par défaut
+            element.style.color = '#86ABE3';
+        });
+        // Sur clic
+        element.addEventListener('mousedown', function () {
+            element.style.color = '#FF1E00';
+        });
+        // Sur relâchement après le clic
+        element.addEventListener('mouseup', function () {
+            element.style.color = '#86ABE3';
         });
     });
-    article1Element.style.border="1px solid #808080";
-    article2Element.style.border="1px solid #808080";
-    article3Element.style.border="1px solid #808080";
 }
 
 function contraste() {
@@ -67,9 +96,6 @@ function contraste() {
     var asideElement = document.getElementById("aside");
     var titreElement = document.getElementById("titre");
     var imageElement = document.querySelectorAll(".iconesC");
-    var article1Element = document.getElementById("article1");
-    var article2Element = document.getElementById("article2");
-    var article3Element = document.getElementById("article3");
     // changer la couleur de fond et de police
     sectionElement.style.backgroundColor = '#D77FE4';
     sectionElement.style.color = '#000000';
@@ -87,16 +113,8 @@ function contraste() {
 
     lienElement.forEach(function(element){
         element.style.color = '#000000';
-        element.addEventListener('mouseover', function() {
-            element.style.color = '#000000';
-        });
-        element.addEventListener('click', function() {
-            element.style.color = '#000000';
-        });
+
     });
-    article1Element.style.border="1px solid #000000";
-    article2Element.style.border="1px solid #000000";
-    article3Element.style.border="1px solid #000000";
 }
     /* fonction police */
 function policeDys() {
@@ -134,8 +152,6 @@ function policeDys() {
         });
         impElement.style.fontFamily = "OpenDyslexic_bold, arial";
     }).catch(function(error) {
-        console.error('Erreur de chargement de la police OpenDyslexic:', error);
-        // mettre un code erreur plus clair pour l'user
         alert('police non utilisable');
     })
 }
@@ -155,8 +171,6 @@ function policeLuciole() {
         document.fonts.add(loadedFont);
         bodyElement.style.fontFamily = "Luciole_regular, arial";
     }).catch(function(error) {
-        console.error('Erreur de chargement de la police Luciole:', error);
-        // mettre un code erreur plus clair pour l'user
         alert('police non utilisable');
     })
     var lucioleBoldFont = new FontFace('Luciole_bold', 'url(luciole/Luciole-Bold.ttf)');
@@ -174,8 +188,6 @@ function policeLuciole() {
         });
         impElement.style.fontFamily = "Luciole_bold, arial";
     }).catch(function(error) {
-        console.error('Erreur de chargement de la police Luciole:', error);
-        // mettre un code erreur plus clair pour l'user
         alert('police non utilisable');
     })
 }
@@ -219,8 +231,6 @@ function policePlus(){
     imgfElement.forEach(function(element){
         if (largeurEcran > 920) {
             element.style.width = "40%";
-        } else if (largeurEcran > 720) {
-            element.style.width = "20%";
         } else {
             element.style.width = "20%";
         }
@@ -304,6 +314,7 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+
         /* service worker */
 const cacheName = 'votre-application-cache-v1';
 const filesToCache = [
@@ -316,14 +327,10 @@ const filesToCache = [
     '/histoire.html',
     '/regles.html',
     '/aides_techniques.html',
-    '/img/diagramA.png',
-    '/img/diagramB.png',
-    '/img/diagramC.png',
-    '/img/diagramD.png',
-    '/img/fauteuils-offensif-defensif.png',
-    '/img/logo_handiman.png',
+    '/img/fauteuil_defensif.jpg',
+    '/img/fauteuil_offensif.jpg',
     '/img/logo_paris8.png',
-    '/img/logo_t8.png',
+    '/img/logo_t9.png',
     '/img/mail.png',
     '/img/header.svg',
     '/img/nav.svg',
